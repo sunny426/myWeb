@@ -1,0 +1,5 @@
+package com.my.web.xyz.dto;
+
+public class ControlTestDto {
+
+}

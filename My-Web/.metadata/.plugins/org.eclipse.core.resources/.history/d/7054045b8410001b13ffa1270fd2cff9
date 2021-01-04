@@ -1,0 +1,21 @@
+package com.my.web.xyz.dto;
+
+
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.my.web.xyz.model.Course;
+
+
+public class ChapterDto {
+
+    @JsonProperty("course")
+	private Course course;
+	
+    @JsonProperty("title")
+	private String title;
+	
+    @JsonProperty("description")
+	private String description;
+
+
+}

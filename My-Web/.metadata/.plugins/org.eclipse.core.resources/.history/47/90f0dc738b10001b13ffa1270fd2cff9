@@ -1,0 +1,34 @@
+package com.my.web.xyz.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.my.web.xyz.dto.CourseDto;
+import com.my.web.xyz.model.Course;
+import com.my.web.xyz.repository.MyWebRepository;
+
+public class CourseServiceImpl implements CourseService{
+	
+	@Autowired
+	MyWebRepository repo;
+
+	@Override
+	public Course getCourse(int courseId) {
+		
+		return repo.findByCourseId(courseId);
+	}
+
+	@Override
+	public ArrayList<Course> getCourses() {
+
+		return (ArrayList<Course>) repo.findAll();
+	}
+
+	@Override
+	public String saveCourse(CourseDto body) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

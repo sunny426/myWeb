@@ -1,0 +1,22 @@
+package com.my.web.xyz.dto;
+
+
+import javax.persistence.Lob;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
+
+public class ParagraphDto {
+
+	@JsonProperty("chapterId")
+	private int chapterId;
+
+	@JsonProperty("text")
+	private int	text;
+	
+	@Lob
+    @JsonProperty("image")
+    private byte[] image;
+
+}
