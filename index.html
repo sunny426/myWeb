@@ -1,0 +1,562 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+
+  	<title>MyWeb</title>
+  	<script type="text/javascript" src="scripts.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  	<link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+      #course-topics {
+        height: 500px; 
+      }
+
+      #course-content {
+        height: 500px; 
+      }
+
+      #course-topics::-webkit-scrollbar {display: none;}
+      #course-content::-webkit-scrollbar {display: none;}
+
+      #course-panel{
+        display: none;
+      }
+
+
+    </style>
+  </head>
+
+
+  <body>
+  	
+
+
+  <header class="text-gray-700 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">MyWeb</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap space-x-8 items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">Home</a>
+        <a onclick = "load_courses()"class="mr-5 hover:text-gray-900">Courses</a>
+        <a class="mr-5 hover:text-gray-900">Tutorials</a>
+      </nav>
+
+      <!-- component Search -->
+       <div class="pt-2 relative mx-auto text-gray-600">
+          <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+            type="search" name="search" placeholder="Search">
+          <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+            <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+              viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+              width="512px" height="512px">
+              <path
+                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+            </svg>
+          </button>
+        </div>
+
+      <div class="flex space-x-4">
+      <button onclick = "load_login_page()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    	  Login
+  	</button>
+  	<button onclick = "load_signup_page()" class="bg-gray-400 hover:bg-gray-500 text-gray-800 font-bold py-2 px-4 rounded">
+  	  Signup
+  	</button>
+  	</div>
+
+    </div>
+  </header>
+
+
+
+  <!-- course content page start -->
+  <div id="course-panel" class="flex md:flex-row-reverse flex-wrap">
+
+    <div id ="course-content" class="overflow-y-scroll w-full md:w-3/4 bg-gray-300 p-4 text-black">
+      <!-- Course content will go here.... -->
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-9 tracking-wider">
+      <div class="mb-8 pl-10 pr-20 ">
+        <!-- C Language Overview -->
+
+            <h6 class="text-blue-700 font-bold text-3xl mb-2 py-2 font-sans text-center">C Language Overview</h6>
+
+            <blockquote class="italic my-8 pl-8 md:pl-12">This chapter describes the basic details about C programming language, how it emerged, what are strengths of C and why we should use C.</blockquote>
+
+
+            <p class="py-5">The C programming language is a general-purpose, high-level language that was originally developed by Dennis M. Ritchie to develop the UNIX operating system at Bell Labs. C was originally first implemented on the DEC PDP-11 computer in 1972. </p>
+
+            <p class="py-5">In 1978, Brian Kernighan and Dennis Ritchie produced the first publicly available description of C, now known as the K&R standard.</p>
+
+            <p class="py-5">The UNIX operating system, the C compiler, and essentially all UNIX applications programs have been written in C. The C has now become a widely used professional language for various reasons.</p>
+
+
+            <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+              <li>Easy to learn </li>
+              <li>Structured language</li>
+              <li>It produces efficient programs.</li>
+              <li>It can handle low-level activities.</li>
+              <li>It can be compiled on a variety of computer platforms.</li>
+            </ul>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Facts about C</h4>
+
+            <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+              <li>C was invented to write an operating system called UNIX.</li>
+              <li>C is a successor of B language, which was introduced around 1970.</li>
+              <li>The language was formalized in 1988 by the American National Standard Institute. (ANSI).</li>
+              <li>The UNIX OS was totally written in C by 1973.</li>
+              <li>Today, C is the most widely used and popular System Programming Language.</li>
+              <li>Most of the state-of-the-art softwares have been implemented using C.</li>
+              <li>Today's most popular Linux OS and RBDMS MySQL have been written in C.</li>
+            </ul>
+
+            <h5 class="py-4 font-sans font-medium text-xl text-blue-700">Why to use C?</h5>
+
+            <p class="py-5">C was initially used for system development work, in particular the programs that make up the operating system. C was adopted as a system development language because it produces code that runs nearly as fast as code written in assembly language. Some examples of the use of C might be:</p>
+
+            <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+              <li>Operating Systems </li>
+              <li>Language Compilers</li>
+              <li>Assemblers</li>
+              <li>Text Editors</li>
+              <li>Print Spoolers</li>
+              <li>Network Drivers</li>
+              <li>Modern Programs</li>
+              <li>Databases</li>
+              <li>Language Interpreters</li>
+              <li>Utilities</li>
+            </ul>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">C Programs</h4>
+
+            <p class="py-5">A C program can vary from 3 lines to millions of lines and it should be written into one or more text files with extension ".c"; for example, hello.c. You can use "vi", "vim" or any other text editor to write your C program into a file.</p>
+
+            <p class="py-5">This tutorial assumes that you know how to edit a text file and how to write source code using any programming language.</p>
+        <!-- <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+        <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p> -->
+      </div>
+    </div> 
+    </div>
+
+
+    <!-- C Environment Setup -->
+
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-9 tracking-wider">
+      <div class="mb-8 pl-10 pr-20">
+        <!-- C Environment Setup -->
+
+            <h6 class="text-blue-700 font-bold text-3xl mb-2 py-2 font-sans text-center">C Environment Setup</h6>
+
+            <blockquote class="italic my-8 pl-8 md:pl-12">This section describes how to set up your system environment before you start doing your programming using C language.</blockquote>
+
+
+            <p class="py-5">Before you start doing programming using C programming language, you need the following two softwares available on your computer, (a) Text Editor and (b) The C Compiler.</p>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Text Editor</h4>
+
+            <p class="py-5">This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi.</p>
+
+            <p class="py-5">Name and version of text editor can vary on different operating systems. For example, Notepad will be used on Windows, and vim or vi can be used on windows as well as Linux or UNIX.</p>
+
+            <p class="py-5">The files you create with your editor are called source files and contain program source code. The source files for C programs are typically named with the extension “.c”.</p>
+
+            <p class="py-5">Before starting your programming, make sure you have one text editor in place and you have enough experience to write a computer program, save it in a file, compile it and finally execute it.</p>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">The C Compiler</h4>
+
+            <p class="py-5">The source code written in source file is the human readable source for your program. It needs to be "compiled", to turn into machine language so that your CPU can actually execute the program as per instructions given.</p>
+
+            <p class="py-5">This C programming language compiler will be used to compile your source code into final executable program. I assume you have basic knowledge about a programming language compiler.</p>
+
+            <p class="py-5">Most frequently used and free available compiler is GNU C/C++ compiler, otherwise you can have compilers either from HP or Solaris if you have respective Operating Systems.</p>
+
+            <p class="py-5">Following section guides you on how to install GNU C/C++ compiler on various OS. I'm mentioning C/C++ together because GNU gcc compiler works for both C and C++ programming languages.</p>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Installation on UNIX /Linux</h4>
+
+            <p class="py-5">If you are using Linux or UNIX, then check whether GCC is installed on your system by entering the following command from the command line:</p>
+
+
+            <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+              <div>
+                <p class="text-white font-mono">$ gcc -v</p>
+              </div>
+            </div>
+
+
+            <p class="py-5">If you have GNU compiler installed on your machine, then it should print a message something as follows:</p>
+
+            <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+              <div>
+                <p class="text-white font-mono">Using built-in specs.</p>
+                <p class="text-white font-mono">Target: i386-redhat-linux </p>
+                <p class="text-white font-mono">Configured with: ../configure --prefix=/usr .......</p>
+                <p class="text-white font-mono">Thread model: posix</p>
+                <p class="text-white font-mono">gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</p>
+              </div>
+            </div>
+
+            <p class="py-5">If GCC is not installed, then you will have to install it yourself using the detailed instructions available athttp://gcc.gnu.org/install/</p>
+
+            <p class="py-5">This tutorial has been written based on Linux and all the given examples have been compiled on Cent OS flavor of Linux system.</p>
+
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Installation on Mac OS</h4>
+
+            <p class="py-5">If you use Mac OS X, the easiest way to obtain GCC is to download the Xcode development environment from Apple's web site and follow the simple installation instructions. Once you have Xcode setup, you will be able to use GNU compiler for C/C++.</p>
+
+            <p class="py-5">Xcode is currently available at developer.apple.com/technologies/tools/.</p>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Installation on Windows</h4>
+
+            <p class="py-5">To install GCC at Windows you need to install MinGW. To install MinGW, go to the MinGW homepage, www.mingw.org, and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-<version>.exe.</p>
+
+            <p class="py-5">While installing MinWG, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more.</p>
+
+            <p class="py-5">Add the bin subdirectory of your MinGW installation to your PATH environment variable, so that you can specify these tools on the command line by their simple names.</p>
+
+            <p class="py-5">When the installation is complete, you will be able to run gcc, g++, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.</p>
+
+      </div>
+    </div> 
+    </div>
+
+  <!-- C Program Structure -->
+    <div class="w-full lg:flex" id="C Program Structure">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-9 tracking-wider">
+      <div class="mb-8 pl-10 pr-20">
+        <!-- C Program Structure-->
+
+            <h6 class="text-blue-700 font-bold text-3xl mb-2 py-2 font-sans text-center">C Program Structure</h6>
+
+            <blockquote class="italic my-8 pl-8 md:pl-12">Let’s look into Hello World example using C Programming Language.</blockquote>
+
+
+            <p class="py-5">Before we study basic building blocks of the C programming language, let us look a bare minimum C program structure so that we can take it as a reference in upcoming chapters.</p>
+
+            <h4 class="py-4 font-sans font-medium text-xl text-blue-700">C Hello World Example</h4>
+
+            <p class="py-5">A C program basically consists of the following parts:</p>
+
+            <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+          <li>Preprocessor Commands</li>
+          <li>Functions</li>
+          <li>Variables</li>
+          <li>Statements & Expressions</li>
+          <li>Comments</li>
+        </ul>
+
+        <p class="py-5">Let us look at a simple code that would print the words "Hello World":</p>
+
+
+        <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+              <div>
+                <p class="text-white font-mono">#include <stdio.h></p>
+                <p class="text-white font-mono"> </p>
+                <p class="text-white font-mono">int main()</p>
+                <p class="text-white font-mono">{</p>
+                <p class="text-white font-mono">  /* my first program in C */</p>
+                <p class="text-white font-mono">  printf("Hello, World! \n");</p>
+                <p class="text-white font-mono"> </p>
+                <p class="text-white font-mono">  return 0;</p>
+                <p class="text-white font-mono">}</p>
+              </div>
+            </div>
+
+            <p class="py-5">Let us look various parts of the above program:</p>
+
+
+            <ul class="list-decimal list-outside my-6 pl-20 md:list-decimal">
+              <li>The first line of the program #include <stdio.h> is a preprocessor command, which tells a C compiler to include stdio.h file before going to actual compilation.</li>
+              <li>The next line int main() is the main function where program execution begins.</li>
+              <li>The next line /*...*/ will be ignored by the compiler and it has been put to add additional comments in the program. So such lines are called comments in the program.</li>
+              <li>The next line printf(...) is another function available in C which causes the message "Hello, World!" to be displayed on the screen.</li>
+              <li>The next line return 0; terminates main()function and returns the value 0.</li>
+        </ul>
+
+        <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Compile & Execute C Program</h4>
+
+            <p class="py-5">Let’s look at how to save the source code in a file, and how to compile and run it. Following are the simple steps:</p>
+
+
+            <ul class="list-decimal list-outside my-6 pl-20 md:list-decimal">
+              <li>Open a text editor and add the above-mentioned code.</li>
+              <li>Save the file as hello.c</li>
+              <li>Open a command prompt and go to the directory where you saved the file.</li>
+              <li>Type gcc hello.c and press enter to compile your code.</li>
+              <li>If there are no errors in your code, the command prompt will take you to the next line and would generate a.out executable file.</li>
+              <li>Now, type a.out to execute your program.</li>
+              <li>You will be able to see "Hello World" printed on the screen</li>
+        </ul>
+
+         <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+              <div>
+                <p class="text-white font-mono">$ gcc hello.c<stdio.h></p>
+                <p class="text-white font-mono">$ ./a.out</p>
+                <p class="text-white font-mono">Hello, World!</p>
+              </div>
+            </div>
+
+            <p class="py-5">Make sure that gcc compiler is in your path and that you are running it in the directory containing source file hello.c.</p>
+
+          </div>
+        </div> 
+      </div>
+
+
+
+
+
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+        <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      </div>
+    </div> 
+    </div>
+
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+        <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      </div>
+    </div> 
+    </div>
+
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+        <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      </div>
+    </div> 
+    </div>
+
+
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+        <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      </div>
+    </div> 
+    </div>
+
+
+    <div class="w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+        <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      </div>
+    </div> 
+    </div>
+
+
+    </div>
+
+
+    <div id = "course-topics" class="overflow-y-scroll w-full md:w-1/4 bg-gray-400 p-4 text-center text-gray-100">
+          <div id="topics" class="md:pr-10 md:py-6">
+          <div class="flex relative">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+              </svg>
+            </div>
+            <div class="flex-grow pl-4">
+              <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">FINISH</h2>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+
+  <!-- course content page end -->
+
+
+
+  <!-- display Available courses -->
+  <section class="text-gray-700 body-font visible" id="courses">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">C - Programming Language</h2>
+          <p class="leading-relaxed text-base">C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on.</p>
+          <a onclick = "load_c_page()" class="mt-3 text-blue-500 inline-flex items-center hover:text-blue-300 visited:text-purple-600">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Data Structure</h2>
+          <p class="leading-relaxed text-base">A data structure is a particular way of organizing data in a computer so that it can be used effectively.</p>
+          <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+        <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Algorithm</h2>
+          <p class="leading-relaxed text-base">An algorithm is a step-by-step process to achieve a specific task done efficiently.</p>
+          <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <button class="flex mx-auto mt-20 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Find More ....</button>
+    </div>
+  </section>
+
+  <!-- Available cources end -->
+
+
+
+
+  <footer class="text-gray-700 body-font">
+    <div class="container px-5 py-20 mx-auto">
+      <div class="flex flex-wrap md:text-left text-center order-first">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">LEARN</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Courses</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Algorithm</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Data Structures</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Blog</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">MORE</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Donate</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Contribute</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Terms Of service</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">COMPANY</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">About Us</a>
+            </li>
+            <li>
+              <a href = "../MyWeb/contactus.html" class="text-gray-600 hover:text-gray-800">Contact Us</a>
+            </li>
+            <li>
+              <a href = "../MyWeb/team.html" class="text-gray-600 hover:text-gray-800">Teams</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">FAQ</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE</h2>
+          <div class="flex xl:flex-no-wrap md:flex-no-wrap lg:flex-wrap flex-wrap justify-center md:justify-start">
+            <input class="w-40 sm:w-auto bg-gray-100 rounded xl:mr-4 lg:mr-0 sm:mr-4 mr-2 border border-gray-400 focus:outline-none focus:border-blue-500 text-base py-2 px-2" placeholder="Email" type="text">
+            <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-2 focus:outline-none hover:bg-blue-600 rounded">Subscribe</button>
+          </div>
+          <p class="text-gray-500 text-sm mt-2 md:text-left text-center">Subscribe for new courses
+            <br class="lg:block hidden">Provide your Email address.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-200">
+      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">MyWeb</span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 MyWeb —
+          <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@SunnyKumar</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  </body>

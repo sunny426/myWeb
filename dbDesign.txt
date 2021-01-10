@@ -1,0 +1,26 @@
+course : 
+Id
+name
+title
+description
+
+
+
+chapter :
+chapterId
+courseId
+title
+Description	
+
+Paragraph :
+id
+chapterId
+text
+image
+
+
+control test :
+id
+chapter_id
+question
+answer

@@ -1,0 +1,264 @@
+<!-- C Language Overview -->
+  <div class="w-full lg:flex" id="C Language Overview">
+  <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-9 tracking-wider">
+    <div class="mb-8 pl-10 pr-20 ">
+      <!-- C Language Overview -->
+
+          <h6 class="text-blue-700 font-bold text-3xl mb-2 py-2 font-sans text-center">C Language Overview</h6>
+
+          <blockquote class="italic my-8 pl-8 md:pl-12">This chapter describes the basic details about C programming language, how it emerged, what are strengths of C and why we should use C.</blockquote>
+
+
+          <p class="py-5">The C programming language is a general-purpose, high-level language that was originally developed by Dennis M. Ritchie to develop the UNIX operating system at Bell Labs. C was originally first implemented on the DEC PDP-11 computer in 1972. </p>
+
+          <p class="py-5">In 1978, Brian Kernighan and Dennis Ritchie produced the first publicly available description of C, now known as the K&R standard.</p>
+
+          <p class="py-5">The UNIX operating system, the C compiler, and essentially all UNIX applications programs have been written in C. The C has now become a widely used professional language for various reasons.</p>
+
+
+          <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+            <li>Easy to learn </li>
+            <li>Structured language</li>
+            <li>It produces efficient programs.</li>
+            <li>It can handle low-level activities.</li>
+            <li>It can be compiled on a variety of computer platforms.</li>
+          </ul>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Facts about C</h4>
+
+          <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+            <li>C was invented to write an operating system called UNIX.</li>
+            <li>C is a successor of B language, which was introduced around 1970.</li>
+            <li>The language was formalized in 1988 by the American National Standard Institute. (ANSI).</li>
+            <li>The UNIX OS was totally written in C by 1973.</li>
+            <li>Today, C is the most widely used and popular System Programming Language.</li>
+            <li>Most of the state-of-the-art softwares have been implemented using C.</li>
+            <li>Today's most popular Linux OS and RBDMS MySQL have been written in C.</li>
+          </ul>
+
+          <h5 class="py-4 font-sans font-medium text-xl text-blue-700">Why to use C?</h5>
+
+          <p class="py-5">C was initially used for system development work, in particular the programs that make up the operating system. C was adopted as a system development language because it produces code that runs nearly as fast as code written in assembly language. Some examples of the use of C might be:</p>
+
+          <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+            <li>Operating Systems </li>
+            <li>Language Compilers</li>
+            <li>Assemblers</li>
+            <li>Text Editors</li>
+            <li>Print Spoolers</li>
+            <li>Network Drivers</li>
+            <li>Modern Programs</li>
+            <li>Databases</li>
+            <li>Language Interpreters</li>
+            <li>Utilities</li>
+          </ul>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">C Programs</h4>
+
+          <p class="py-5">A C program can vary from 3 lines to millions of lines and it should be written into one or more text files with extension ".c"; for example, hello.c. You can use "vi", "vim" or any other text editor to write your C program into a file.</p>
+
+          <p class="py-5">This tutorial assumes that you know how to edit a text file and how to write source code using any programming language.</p>
+      <!-- <div class="text-black font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+      <p class="text-grey-darker text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p> -->
+    </div>
+  </div> 
+  </div>
+
+<!-- C Environment Setup -->
+
+  <div class="w-full lg:flex" id="C Environment Setup">
+  <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-9 tracking-wider">
+    <div class="mb-8 pl-10 pr-20">
+      <!-- C Environment Setup-->
+
+          <h6 class="text-blue-700 font-bold text-3xl mb-2 py-2 font-sans text-center">C Environment Setup</h6>
+
+          <blockquote class="italic my-8 pl-8 md:pl-12">This section describes how to set up your system environment before you start doing your programming using C language.</blockquote>
+
+
+          <p class="py-5">Before you start doing programming using C programming language, you need the following two softwares available on your computer, (a) Text Editor and (b) The C Compiler.</p>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Text Editor</h4>
+
+          <p class="py-5">This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi.</p>
+
+          <p class="py-5">Name and version of text editor can vary on different operating systems. For example, Notepad will be used on Windows, and vim or vi can be used on windows as well as Linux or UNIX.</p>
+
+          <p class="py-5">The files you create with your editor are called source files and contain program source code. The source files for C programs are typically named with the extension “.c”.</p>
+
+          <p class="py-5">Before starting your programming, make sure you have one text editor in place and you have enough experience to write a computer program, save it in a file, compile it and finally execute it.</p>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">The C Compiler</h4>
+
+          <p class="py-5">The source code written in source file is the human readable source for your program. It needs to be "compiled", to turn into machine language so that your CPU can actually execute the program as per instructions given.</p>
+
+          <p class="py-5">This C programming language compiler will be used to compile your source code into final executable program. I assume you have basic knowledge about a programming language compiler.</p>
+
+          <p class="py-5">Most frequently used and free available compiler is GNU C/C++ compiler, otherwise you can have compilers either from HP or Solaris if you have respective Operating Systems.</p>
+
+          <p class="py-5">Following section guides you on how to install GNU C/C++ compiler on various OS. I'm mentioning C/C++ together because GNU gcc compiler works for both C and C++ programming languages.</p>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Installation on UNIX /Linux</h4>
+
+          <p class="py-5">If you are using Linux or UNIX, then check whether GCC is installed on your system by entering the following command from the command line:</p>
+
+
+          <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+            <div>
+              <p class="text-white font-mono">$ gcc -v</p>
+            </div>
+          </div>
+
+
+          <p class="py-5">If you have GNU compiler installed on your machine, then it should print a message something as follows:</p>
+
+          <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+            <div>
+              <p class="text-white font-mono">Using built-in specs.</p>
+              <p class="text-white font-mono">Target: i386-redhat-linux </p>
+              <p class="text-white font-mono">Configured with: ../configure --prefix=/usr .......</p>
+              <p class="text-white font-mono">Thread model: posix</p>
+              <p class="text-white font-mono">gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</p>
+            </div>
+          </div>
+
+
+          <p class="py-5">If GCC is not installed, then you will have to install it yourself using the detailed instructions available athttp://gcc.gnu.org/install/</p>
+
+          <p class="py-5">This tutorial has been written based on Linux and all the given examples have been compiled on Cent OS flavor of Linux system.</p>
+
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Installation on Mac OS</h4>
+
+          <p class="py-5">If you use Mac OS X, the easiest way to obtain GCC is to download the Xcode development environment from Apple's web site and follow the simple installation instructions. Once you have Xcode setup, you will be able to use GNU compiler for C/C++.</p>
+
+          <p class="py-5">Xcode is currently available at developer.apple.com/technologies/tools/.</p>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Installation on Windows</h4>
+
+          <p class="py-5">To install GCC at Windows you need to install MinGW. To install MinGW, go to the MinGW homepage, www.mingw.org, and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-<version>.exe.</p>
+
+          <p class="py-5">While installing MinWG, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more.</p>
+
+          <p class="py-5">Add the bin subdirectory of your MinGW installation to your PATH environment variable, so that you can specify these tools on the command line by their simple names.</p>
+
+          <p class="py-5">When the installation is complete, you will be able to run gcc, g++, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.</p>
+
+    </div>
+  </div> 
+  </div>
+
+<!-- C Program Structure -->
+  <div class="w-full lg:flex" id="C Program Structure">
+  <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-9 tracking-wider">
+    <div class="mb-8 pl-10 pr-20">
+      <!-- C Program Structure-->
+
+          <h6 class="text-blue-700 font-bold text-3xl mb-2 py-2 font-sans text-center">C Program Structure</h6>
+
+          <blockquote class="italic my-8 pl-8 md:pl-12">Let’s look into Hello World example using C Programming Language.</blockquote>
+
+
+          <p class="py-5">Before we study basic building blocks of the C programming language, let us look a bare minimum C program structure so that we can take it as a reference in upcoming chapters.</p>
+
+          <h4 class="py-4 font-sans font-medium text-xl text-blue-700">C Hello World Example</h4>
+
+          <p class="py-5">A C program basically consists of the following parts:</p>
+
+          <ul class="list-disc list-inside pl-20 my-8 md:list-disc">
+        <li>Preprocessor Commands</li>
+        <li>Functions</li>
+        <li>Variables</li>
+        <li>Statements & Expressions</li>
+        <li>Comments</li>
+      </ul>
+
+      <p class="py-5">Let us look at a simple code that would print the words "Hello World":</p>
+
+
+      <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+            <div>
+              <p class="text-white font-mono">#include <stdio.h></p>
+              <p class="text-white font-mono"> </p>
+              <p class="text-white font-mono">int main()</p>
+              <p class="text-white font-mono">{</p>
+              <p class="text-white font-mono">  /* my first program in C */</p>
+              <p class="text-white font-mono">  printf("Hello, World! \n");</p>
+              <p class="text-white font-mono"> </p>
+              <p class="text-white font-mono">  return 0;</p>
+              <p class="text-white font-mono">}</p>
+            </div>
+          </div>
+
+          <p class="py-5">Let us look various parts of the above program:</p>
+
+
+          <ul class="list-decimal list-outside my-6 pl-20 md:list-decimal">
+            <li>The first line of the program #include <stdio.h> is a preprocessor command, which tells a C compiler to include stdio.h file before going to actual compilation.</li>
+            <li>The next line int main() is the main function where program execution begins.</li>
+            <li>The next line /*...*/ will be ignored by the compiler and it has been put to add additional comments in the program. So such lines are called comments in the program.</li>
+            <li>The next line printf(...) is another function available in C which causes the message "Hello, World!" to be displayed on the screen.</li>
+            <li>The next line return 0; terminates main()function and returns the value 0.</li>
+      </ul>
+
+      <h4 class="py-4 font-sans font-medium text-xl text-blue-700">Compile & Execute C Program</h4>
+
+          <p class="py-5">Let’s look at how to save the source code in a file, and how to compile and run it. Following are the simple steps:</p>
+
+
+          <ul class="list-decimal list-outside my-6  md:list-decimal">
+            <li>Open a text editor and add the above-mentioned code.</li>
+            <li>Save the file as hello.c</li>
+            <li>Open a command prompt and go to the directory where you saved the file.</li>
+            <li>Type gcc hello.c and press enter to compile your code.</li>
+            <li>If there are no errors in your code, the command prompt will take you to the next line and would generate a.out executable file.</li>
+            <li>Now, type a.out to execute your program.</li>
+            <li>You will be able to see "Hello World" printed on the screen</li>
+      </ul>
+
+       <div class="p-4 bg-gray-900 rounded shadow-md flex items-left space-x-4">
+            <div>
+              <p class="text-white font-mono">$ gcc hello.c<stdio.h></p>
+              <p class="text-white font-mono">$ ./a.out</p>
+              <p class="text-white font-mono">Hello, World!</p>
+            </div>
+          </div>
+
+          <p class="py-5">Make sure that gcc compiler is in your path and that you are running it in the directory containing source file hello.c.</p>
+
+        </div>
+      </div> 
+      </div>
+
+
+
+
+
+<!-- 
+C Basic Syntax
+C Data Types
+C Variables
+C Constants and Literals
+C Storage Classes
+C Operators
+Decision Making in C
+C Loops
+C Functions
+C Scope Rules
+C Arrays
+C Pointers
+C Strings
+C Structures
+C Unions
+Bit Fields
+Typedef
+Input & Output
+File I/O
+Preprocessors
+Header Files
+Type Casting
+Error Handling
+Recursion
+Variable Arguments
+Memory Management
+Command Line Arguments
